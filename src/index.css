@@ -1,0 +1,169 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html{
+    scroll-behavior: smooth;
+    /* scroll-padding-top: 1010 px ; */
+}
+
+.writing-vertical {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+  
+  .vertical-heading {
+    writing-mode: vertical-rl; /* Vertical text */
+    text-orientation:sideways; /* Proper upright letters */
+    /* font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0; */
+  }
+
+  /* Content Container */
+  .content {
+    flex: 1; /* Allow the content to take remaining space */
+    /* padding-left: 20px; Space between heading and text */
+    /* font-size: 1rem; */
+    line-height: 1.6;
+    /* color: #333; */
+  }
+
+  /*for card animation*/
+/* From Uiverse.io by Tiagoadag */ 
+.card {
+  background-image: linear-gradient(163deg, #ff0000 0%, #3700ff 100%);
+  border-radius: 20px;
+  transition: all .3s;
+ }
+ 
+ .card2 {
+  
+  /* background-color: #1a1a1a; */
+  border-radius:20px;
+  transition: all .2s;
+ }
+ 
+ .card2:hover {
+  transform: scale(0.98);
+  border-radius: 20px;
+ }
+ 
+ .card:hover {
+  box-shadow: 0px 0px 30px 5px rgba(144, 0, 255, 0.3);
+ }
+
+
+ /* for the contact form */
+.form-container {
+  /* width: auto; */
+  background: linear-gradient(#212121, #212121) padding-box,
+              linear-gradient(123deg, transparent 50%,blue,rgb(255, 0, 0)) border-box;
+  @apply border-4 border-transparent dark:border-2 dark:border-transparent;
+  padding: 32px 24px;
+  font-size: 14px;
+  /* font-family: inherit; */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  background-size: 100% 500%;
+  animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 100%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  /* font-family: inherit; */
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  /* font-family: inherit; */
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 1;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #0005ff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #0005ff;
+  
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  /* font-family: inherit; */
+  color: #a5a5a5;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #fff;
+  border-color: #fff;
+}
+
+
+
