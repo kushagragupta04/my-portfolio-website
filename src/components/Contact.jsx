@@ -91,7 +91,7 @@ const Contact = () => {
             <p>
               <a
                 href="mailto:Kushagra2808gupta@gmail.com"
-                className="text-gray-300 dark:text-black no-underline hover:text-blue-700 "
+                className="dark:text-gray-300 text-black no-underline hover:text-blue-700 "
               >
                 Kushagra2808gupta@gmail.com
               </a>
