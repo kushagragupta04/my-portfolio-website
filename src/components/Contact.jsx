@@ -30,7 +30,11 @@ const Contact = () => {
     }
 
     emailjs
-      .sendForm("service_6td3k28", "template_johoxcm", formRef.current, "-3c5_quCEm3UhTV7X"
+      .sendForm(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        e.target,
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY
       )
       .then(
         (result) => {
@@ -87,7 +91,7 @@ const Contact = () => {
             <p>
               <a
                 href="mailto:Kushagra2808gupta@gmail.com"
-                className="text-gray-300 no-underline hover:text-blue-700 "
+                className="text-gray-300 dark:text-black no-underline hover:text-blue-700 "
               >
                 Kushagra2808gupta@gmail.com
               </a>
