@@ -4,26 +4,18 @@ const Projects = () => {
   const projects = [
     {
       name: "Portfolio Website",
-      description: "A sleek personal portfolio showcasing my skills and projects.",
-      link: "#",
-      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+      description: "A clean and responsive portfolio built using React, Tailwind CSS, and modern web technologies for a fast and responsive user experience.",
+      demoLink: "#",
+      codeLink:"https://github.com/kushagragupta04/my-portfolio-website",
+      image: "/photos/portfolio_screenshot.png",
     },
-
     {
-      name: "Portfolio Website",
-      description: "A sleek personal portfolio showcasing my skills and projects.",
-      link: "#",
-      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
+      name: "UniRank-Unified College Placement Platform",
+      description: "Building a web platform  to connect with peers and recruiters through real-time interactions and personalized profiles.",
+      demoLink: "",
+      codeLink:"https://github.com/kushagragupta04/UniRank-student-platform",
+      image: "/photos/unified_platform.png",
     },
-
-    {
-      name: "Portfolio Website",
-      description: "A sleek personal portfolio showcasing my skills and projects.",
-      link: "#",
-      image: "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg",
-    },
-
-    
 
   ];
 
@@ -31,7 +23,8 @@ const Projects = () => {
     <section id="projects" className="dark:text-white py-32 px-6 md:mx-28 min-h-max">
       <div className="container mx-auto text-center">
         <h2 className="uppercase font-extrabold my-4 text-5xl py-4 px-7">Projects</h2>
-        <div className="font-poppins grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="font-poppins flex flex-col md:flex-row gap-10">
+          {/* grid-cols-1 md:grid-cols-2 lg:grid-cols-2  */}
           {projects.map((project, index) => (
             <div key={index} className="h-full max-w-xs md:max-w-xs mx-auto">
               <div className="card h-full ">
@@ -46,11 +39,12 @@ const Projects = () => {
                   {/* Content */}
                   <div className="p-1 flex flex-col flex-grow ">
                     <h3 className="text-xl font-bold text-left mt-2">{project.name}</h3>
-                    <p className="text-gray-700 dark:text-gray-300 text-left flex-grow my-5">{project.description}</p>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm text-left flex-grow my-5">{project.description}</p>
 
                     {/* View project  */}
                     <div className="mt-auto text-sm flex justify-between gap-2">
                       {/* github Button */}
+                      
                       <a
                         href={project.demoLink}
                         className="w-1/2 bg-green-500/25 flex items-center justify-center gap-2 border-2 border-green-500 hover:translate-y-0.5 hover:bg-green-500 tranform text-green-500 hover:text-black px-4 py-2 rounded-lg shadow-md transition"

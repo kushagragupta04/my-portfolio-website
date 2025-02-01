@@ -49,7 +49,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className=" text-black dark:text-gray-300 py-32 px-4 mx-4 md:mx-2 lg:mx-8 min-h-max">
+    <section id="contact" className=" text-black dark:text-gray-300 py-32 px-4 mx-4 md:mx-2 lg:mx-8 min-h-max lg:min-h-screen">
       <div className="lg:flex md:mx-24 space-y-8 md:space-y-0 justify-between">
         {/* Heading Section */}
         <div className="text-5xl md:px-4 lg:m-10">

@@ -1,30 +1,30 @@
 import React from "react";
 
-const Hero = ({darkMode}) => {
+const Hero = ({ darkMode }) => {
   return (
     <section id="hero" className=" text-white min-h-screen flex items-center font-poppins">
       <video
-    key={darkMode ? "dark-mode-video" : "light-mode-video"} // Force re-render
-    className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
-    autoPlay
-    loop
-    muted
-  >
-    {darkMode ? (
-      <source src="/videos/bg_Positive.mp4" type="video/mp4" />
-    ) : (
-      <source className="opacity-100" src="/videos/bg_Negative.mp4" type="video/mp4" />
-    )}
-    Your browser does not support the video tag.
-  </video>
+        key={darkMode ? "dark-mode-video" : "light-mode-video"} // Force re-render
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 opacity-30"
+        autoPlay
+        loop
+        muted
+      >
+        {darkMode ? (
+          <source src="/videos/bg_Positive.mp4" type="video/mp4" />
+        ) : (
+          <source className="opacity-100" src="/videos/bg_Negative.mp4" type="video/mp4" />
+        )}
+        Your browser does not support the video tag.
+      </video>
       {/* <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#1A1A1A] opacity-50"></div> */}
-      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 z-0">
+      <div className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between md:mx-28  lg:mx-36 lg:min-h-screen min-h-max z-0">
         {/* Left Content */}
         <div className="md:w-1/2 text-center md:text-left space-y-6">
           <h1 className="text-lg font-bold  dark:text-white text-black">Hi, I'm <div className="text-orange-600 dark:text-[#FFD700] text-4xl md:text-5xl">Kushagra</div>
           </h1>
           <p className="text-lg dark:text-white text-black font-semibold">
-          Computer Science undergraduate with a passion for learning and problem-solving, eager to gain practical experience and contribute to impactful projects.
+            Computer Science undergraduate with a passion for learning and problem-solving, eager to gain practical experience and contribute to impactful projects.
           </p>
           <div className="flex justify-center md:justify-start space-x-4">
             <a href="#contact" className="bg-blue-800 px-6 py-3 rounded-md text-white font-semibold hover:bg-blue-600">Contact Me</a>
@@ -96,7 +96,7 @@ const Hero = ({darkMode}) => {
                     style={{
                       stroke: "none",
                       strokeWidth: 1,
-                      fill: "currentColor", // Dynamically adjusts with dark mode
+                      fill: "currentColor",
                       fillRule: "nonzero",
                       opacity: 1,
                     }}
@@ -115,8 +115,8 @@ const Hero = ({darkMode}) => {
         </div>
 
         {/* Right Image */}
-        <div className="md:w-1/2 flex justify-center">
-          <img src="/photos/employee-1.png" alt="Hero" className="rounded-full shadow-lg max-w-xs md:max-w-sm lg:max-w-md h-72" />
+        <div className=" flex justify-center">
+          <img src="/photos/Kushagra_photo.jpg" alt="Hero" className="rounded-full shadow-lg max-w-xs md:max-w-sm lg:max-w-md lg:h-80 md:h-72 h-56" />
         </div>
       </div>
     </section>

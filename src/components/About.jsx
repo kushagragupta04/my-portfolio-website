@@ -2,14 +2,14 @@ import React from "react";
 
 const About = () => {
   return (
-    <section id="about" className="dark:text-gray-300 text-gray-900 mt-20 py-32 px-6 md:flex md:mx-28  lg:mx-36 min-h-screen ">
+    <section id="about" className="dark:text-gray-300 text-gray-900 mt-20 py-32 px-6 md:flex md:mx-28  lg:mx-36 lg:min-h-screen min-h-max ">
 
       <div className="text-5xl md:px-5">
         <h1 className=" uppercase font-extrabold my-4 md:vertical-heading ">About Me</h1>
       </div>
 
 
-      <div className="content text-lg lg:pt-6  space-y-3 font-poppins ">
+      <div className="content text-lg lg:pt-5  space-y-3 font-poppins ">
       <p>Hey, I’m Kushagra Gupta, a Computer Science undergraduate at Manipal University Jaipur. I enjoy meeting new people, exploring different ideas, and learning something new from every interaction. I believe the best growth happens through curiosity and real conversations.</p>
 
 {/* <p>For me, progress isn’t about big leaps—it’s about improving a little each day. Whether it’s picking up a new skill, figuring out a tough problem, or just realizing I was overthinking something the whole time, every step adds up.</p> */}
