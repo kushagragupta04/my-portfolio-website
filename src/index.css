@@ -35,20 +35,20 @@ html{
 /* From Uiverse.io by Tiagoadag */ 
 .card {
   background-image: linear-gradient(163deg, #ff0000 0%, #3700ff 100%);
-  border-radius: 20px;
+  border-radius: 15px;
   transition: all .3s;
  }
  
  .card2 {
   
   /* background-color: #1a1a1a; */
-  border-radius:20px;
+  border-radius:14px;
   transition: all .2s;
  }
  
  .card2:hover {
   transform: scale(0.98);
-  border-radius: 20px;
+  border-radius: 15px;
  }
  
  .card:hover {

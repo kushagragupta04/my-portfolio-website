@@ -116,7 +116,7 @@ const Hero = ({ darkMode }) => {
 
         {/* Right Image */}
         <div className=" flex justify-center">
-          <img src="/photos/Kushagra_photo.jpg" alt="Hero" className="rounded-full shadow-lg max-w-xs md:max-w-sm lg:max-w-md lg:h-80 md:h-72 h-56" />
+          <img src="/photos/Kushagra_photo.webp" alt="Hero" className="rounded-full shadow-lg max-w-xs md:max-w-sm lg:max-w-md lg:h-80 md:h-72 h-56" />
         </div>
       </div>
     </section>
