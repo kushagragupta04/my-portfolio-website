@@ -3,6 +3,34 @@ import React from "react";
 const Projects = () => {
   const projects = [
     {
+      name: "SkillSwap",
+      description: "SkillSwap is a web platform designed to enable users to learn a skill by teaching a skill.",
+      demoLink: "skillswap-learning.vercel.app",
+      codeLink: "https://github.com/kushagragupta04/SkillSwap",
+      image: "https://img.youtube.com/vi/ZdHsg276cD0/0.jpg",
+    },
+    {
+      name: "Video Transcoding System",
+      description: "This is a scalable, event-driven video transcoding pipeline using AWS services and Redis to automatically convert uploaded videos into multiple resolutions.",
+      // demoLink: "skillswap-learning.vercel.app",
+      codeLink: "https://github.com/kushagragupta04/Video-transcoder",
+      image: "https://img.youtube.com/vi/i0EtH3EJCYY/0.jpg",
+    },
+    {
+      name: "InvoSync",
+      description: "InvoSync is an AI-powered invoice and purchase order reconciliation system that uses Tesseract OCR and RapidFuzz to detect, extract, and compare data from scanned invoices and purchase orders.",
+      // demoLink: "https://uni-rank.vercel.app/",
+      codeLink: "https://github.com/kushagragupta04/InvoSync",
+      image: "https://img.youtube.com/vi/r7-kpqDxxr4/0.jpg",
+    },
+    {
+      name: "SafeTrail",
+      description: "A multi-platform travel safety solution that integrates AI-driven threat detection, and real-time emergency response.",
+      // demoLink: "https://uni-rank.vercel.app/",
+      codeLink: "https://github.com/kushagragupta04/SafeTrail",
+      image: "https://img.youtube.com/vi/jbg5iuaavkU/0.jpg",
+    },
+    {
       name: "UniRank",
       description: "A web platform  to connect with peers and recruiters through real-time interactions and personalized profiles.",
       // demoLink: "https://uni-rank.vercel.app/",
