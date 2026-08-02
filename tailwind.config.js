@@ -6,9 +6,11 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily:{
-        roboto:["Roboto","sans-serif"],
-        poppins:["Poppins","sans-serif"],
+      fontFamily: {
+        sans: ["'Plus Jakarta Sans'", "sans-serif"],
+        mono: ["'JetBrains Mono'", "monospace"],
+        roboto: ["Roboto", "sans-serif"],
+        poppins: ["Poppins", "sans-serif"],
       }
 
     },
