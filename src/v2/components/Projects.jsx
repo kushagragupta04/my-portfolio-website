@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { trackEvent } from '../../utils/analytics';
 
 const projects = [
   {
@@ -402,6 +403,10 @@ const ProjectModal = ({ project, onClose }) => {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="Project GitHub Click"
+                data-umami-event-project={project.name}
+                data-umami-event-location="Modal"
+                onClick={() => trackEvent('Project GitHub Click', { project: project.name, location: 'Modal' })}
                 className="flex items-center gap-2 px-4 py-2 rounded-lg border border-white/15 bg-white/[0.06] hover:bg-white/[0.12] text-sm font-medium text-white transition-all"
               >
                 <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -414,6 +419,10 @@ const ProjectModal = ({ project, onClose }) => {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-umami-event="Project Live Click"
+                  data-umami-event-project={project.name}
+                  data-umami-event-location="Modal"
+                  onClick={() => trackEvent('Project Live Click', { project: project.name, location: 'Modal' })}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg border border-emerald-500/40 bg-emerald-500/15 hover:bg-emerald-500/25 text-sm font-semibold text-emerald-300 hover:text-white transition-all"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -427,6 +436,10 @@ const ProjectModal = ({ project, onClose }) => {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
+                  data-umami-event="Project Demo Click"
+                  data-umami-event-project={project.name}
+                  data-umami-event-location="Modal"
+                  onClick={() => trackEvent('Project Demo Click', { project: project.name, location: 'Modal' })}
                   className="flex items-center gap-2 px-4 py-2 rounded-lg border border-amber-500/40 bg-amber-500/15 hover:bg-amber-500/25 text-sm font-semibold text-amber-300 hover:text-white transition-all"
                 >
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
@@ -533,9 +546,15 @@ const ProjectCard = ({ project, isAnyHovered, isThisHovered, onEnter, onLeave, o
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="Project GitHub Click"
+            data-umami-event-project={project.name}
+            data-umami-event-location="Card"
             className="w-7 h-7 rounded-lg border border-white/10 bg-white/[0.04] flex items-center justify-center text-neutral-400 hover:text-white hover:border-white/30 flex-shrink-0 transition-all"
             aria-label="GitHub"
-            onClick={(e) => e.stopPropagation()}
+            onClick={(e) => {
+              e.stopPropagation();
+              trackEvent('Project GitHub Click', { project: project.name, location: 'Card' });
+            }}
           >
             <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.026A9.564 9.564 0 0112 6.844a9.59 9.59 0 012.504.337c1.909-1.295 2.747-1.026 2.747-1.026.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
@@ -562,8 +581,14 @@ const ProjectCard = ({ project, isAnyHovered, isThisHovered, onEnter, onLeave, o
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="Project Live Click"
+                data-umami-event-project={project.name}
+                data-umami-event-location="Card"
                 className="text-[10px] md:text-[11px] font-mono font-semibold text-emerald-400 border border-emerald-500/30 bg-emerald-500/10 px-2 py-0.5 rounded-md hover:bg-emerald-500/20 transition-colors"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  trackEvent('Project Live Click', { project: project.name, location: 'Card' });
+                }}
               >
                 Live ↗
               </a>
@@ -573,8 +598,14 @@ const ProjectCard = ({ project, isAnyHovered, isThisHovered, onEnter, onLeave, o
                 href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
+                data-umami-event="Project Demo Click"
+                data-umami-event-project={project.name}
+                data-umami-event-location="Card"
                 className="text-[10px] md:text-[11px] font-mono font-semibold text-amber-400 border border-amber-500/30 bg-amber-500/10 px-2 py-0.5 rounded-md hover:bg-amber-500/20 transition-colors"
-                onClick={(e) => e.stopPropagation()}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  trackEvent('Project Demo Click', { project: project.name, location: 'Card' });
+                }}
               >
                 Demo ↗
               </a>
@@ -617,7 +648,10 @@ const Projects = () => {
               isThisHovered={hoveredIndex === i}
               onEnter={() => setHoveredIndex(i)}
               onLeave={() => setHoveredIndex(null)}
-              onClick={() => setSelectedProject(project)}
+              onClick={() => {
+                setSelectedProject(project);
+                trackEvent('Project Modal Open', { project: project.name });
+              }}
             />
           ))}
         </div>

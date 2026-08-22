@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackEvent } from '../../utils/analytics';
 
 const Hero = () => {
   return (
@@ -88,6 +89,8 @@ const Hero = () => {
             href="https://github.com/kushagragupta04"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="GitHub Profile Click"
+            onClick={() => trackEvent('GitHub Profile Click', { source: 'Hero' })}
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/25 text-neutral-300 hover:text-white transition-all text-xs md:text-sm font-medium"
             aria-label="GitHub"
           >
@@ -102,6 +105,8 @@ const Hero = () => {
             href="https://www.linkedin.com/in/kushagragupta08/"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="LinkedIn Profile Click"
+            onClick={() => trackEvent('LinkedIn Profile Click', { source: 'Hero' })}
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/25 text-neutral-300 hover:text-white transition-all text-xs md:text-sm font-medium"
             aria-label="LinkedIn"
           >
@@ -114,6 +119,9 @@ const Hero = () => {
           {/* Email */}
           <a
             href="mailto:kushagra2808gupta@gmail.com"
+            data-umami-event="Email Click"
+            data-umami-event-source="Hero"
+            onClick={() => trackEvent('Email Click', { source: 'Hero' })}
             className="flex items-center gap-2 px-3 py-1.5 rounded-lg border border-white/10 bg-white/[0.03] hover:bg-white/[0.08] hover:border-white/25 text-neutral-300 hover:text-white transition-all text-xs md:text-sm font-medium"
             aria-label="Email"
           >
@@ -128,6 +136,9 @@ const Hero = () => {
             href="https://drive.google.com/file/d/1NRof_TmCUJ6wcDMxS9qj1rdZRaPHXQda/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
+            data-umami-event="Resume Click"
+            data-umami-event-source="Hero"
+            onClick={() => trackEvent('Resume Click', { source: 'Hero' })}
             className="ml-auto flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg border border-emerald-500/30 bg-emerald-500/10 hover:bg-emerald-500/20 hover:border-emerald-400 text-emerald-300 hover:text-white transition-all text-xs md:text-sm font-semibold shadow-sm"
           >
             <span>Resume</span>

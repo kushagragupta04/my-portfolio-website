@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackEvent } from '../../utils/analytics';
 
 const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -7,6 +8,7 @@ const Contact = () => {
   const handleCopy = () => {
     navigator.clipboard.writeText(email).then(() => {
       setCopied(true);
+      trackEvent('Copy Email Address', { source: 'Contact Section' });
       setTimeout(() => setCopied(false), 2200);
     });
   };
@@ -40,6 +42,9 @@ const Contact = () => {
           <div className="flex items-center justify-between gap-4 flex-wrap">
             <a
               href={`mailto:${email}`}
+              data-umami-event="Email Mailto Click"
+              data-umami-event-source="Contact"
+              onClick={() => trackEvent('Email Mailto Click', { source: 'Contact' })}
               className="flex items-center gap-3 min-w-0 group/email cursor-pointer"
             >
               <div className="w-9 h-9 rounded-lg border border-white/10 bg-white/[0.04] flex items-center justify-center text-emerald-400 flex-shrink-0 group-hover/email:text-emerald-300 group-hover/email:border-white/20 transition-all">
