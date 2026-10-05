@@ -133,7 +133,7 @@ const Hero = () => {
 
           {/* Resume View */}
           <a
-            href="https://drive.google.com/file/d/1NRof_TmCUJ6wcDMxS9qj1rdZRaPHXQda/view?usp=sharing"
+            href="https://drive.google.com/file/d/1sp6boE4MOTBYBo9aXSxjbLeqACxZVAld/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             data-umami-event="Resume Click"

@@ -2,9 +2,9 @@ import React from 'react';
 
 const stats = [
   { label: 'Problems Solved', value: '450+', platform: 'LeetCode, GFG, Codeforces' },
-  { label: 'Contest Rating', value: '1580+', platform: 'LeetCode' },
-  { label: 'Top Percentile', value: 'Top 15%', platform: 'LeetCode' },
-  { label: 'Professional Experience', value: '3+ Months', platform: 'Software Development' },
+  { label: 'Contest Rating', value: '1630+', platform: 'LeetCode' },
+  { label: 'Top Percentile', value: 'Top 19.8%', platform: 'LeetCode' },
+  { label: 'Professional Experience', value: '5+ Months', platform: 'Software Development' },
   { label: 'Contest Rating', value: '1492+', platform: 'CodeChef' },
 ];
 

@@ -88,6 +88,50 @@ const projects = [
       '#6d4cff',
     ],
   },
+    {
+    name: 'Axiom Gateway',
+    description:
+      'Enterprise-grade real-time AI governance and policy enforcement platform featuring a sub-millisecond Zero-LLM policy engine, multi-modal policy ingestion, two-phase human governance, and an immutable cryptographic audit ledger.',
+    details: [
+      'Architected an offline ingestion pipeline using Docling and PyMuPDF with deontic modal heuristic scoring to eliminate >70% boilerplate noise, extracting multi-tiered compliance rules via Groq LLMs with automated multi-model fallback and SHA-256 signature deduplication.',
+
+      'Engineered a deterministic Zero-LLM Fast-Path Policy Engine that intercepts and evaluates live AI agent tool actions across ALLOW, BLOCK, and ESCALATE in <1ms latency, completely eliminating runtime token costs, latency bottlenecks, and LLM hallucination risks.',
+
+      'Built an asynchronous Two-Phase Human-in-the-Loop governance system covering Phase 1 rule draft-to-approval lifecycle management and Phase 2 live escalation queue with pre-execution revalidation before dispatching authorized calls to isolated downstream services via X-Gateway-Secret headers.',
+
+      'Developed a full-stack platform using FastAPI, PostgreSQL (Asyncpg / SQLAlchemy 2.0), React 19, and Vite, featuring an immutable SHA-256 hash-chained audit ledger with real-time tamper detection, X-Idempotency-Key replay attack prevention, and an interactive action simulation console.',
+    ],
+    tags: [
+      'Python',
+      'FastAPI',
+      'PostgreSQL',
+      'Asyncpg',
+      'SQLAlchemy',
+      'Groq',
+      'Qwen',
+      'PyMuPDF',
+      'Docling',
+      'FAISS',
+      'React 19',
+      'Vite',
+      'Tailwind CSS',
+      'Cryptography (SHA-256)',
+    ],
+    github: 'https://github.com/kushagragupta04/Axiom-Gateway',
+    live: null,
+    demo: 'https://youtu.be/My7XogzIn1A',
+    image: '/photos/AxiomGateway.webp',
+    burst: [
+      '#0b1a0e',
+      '#1a3d1c',
+      '#86bc25',
+      '#0f2b1a',
+      '#0a1f14',
+      '#438814',
+      '#112918',
+      '#86bc25',
+    ],
+  },
   {
   name: 'SafeTrail',
   description:
@@ -262,6 +306,48 @@ const projects = [
     '#4b83d1',
   ],
 },
+  {
+    name: 'FlowSentry',
+    description:
+      'Enterprise-grade real-time fraud detection platform with stateful stream processing, XGBoost risk scoring, Kafka lag-driven autoscaling, and async LLM investigation generation.',
+    details: [
+      'Engineered a high-performance synchronous scoring pipeline using FastAPI, PyFlink, and Redis to process 5,000+ sustained TPS with sub-100ms p99 latency (18ms p50, 67ms p99) over sliding behavioral feature windows.',
+
+      'Implemented a hybrid decision gate combining XGBoost risk inference (0.926 AUC-ROC) with deterministic velocity rule overrides and RocksDB state backends to deliver fast, auditable allow, flag, or block decisions.',
+
+      'Built an asynchronous background worker using Groq Llama 3 70B and automated PII stripping to generate structured investigation notes for flagged events, leveraging Redis rule-hash caching for a 35% cache hit rate.',
+
+      'Developed a full-stack system with Next.js, Kubernetes HPA driven by Kafka consumer lag metrics, OpenTelemetry, Grafana dashboards, and LitmusChaos resilience testing to guarantee zero event loss under node failure.',
+    ],
+    tags: [
+      'Python',
+      'FastAPI',
+      'PyFlink',
+      'Apache Kafka',
+      'XGBoost',
+      'Redis',
+      'PostgreSQL',
+      'Groq',
+      'Next.js',
+      'Kubernetes',
+      'Prometheus',
+    ],
+    github: 'https://github.com/kushagragupta04/FlowSentry',
+    live: null,
+    demo: 'https://drive.google.com/file/d/1duccpwxcGBxSsmortp5G6lzLTWVrSUuc/view?usp=sharing',
+    image: '/photos/FlowSentry.webp',
+    burst: [
+      '#0a192f',
+      '#1e3a8a',
+      '#2563eb',
+      '#030712',
+      '#0a192f',
+      '#1d4ed8',
+      '#030712',
+      '#38bdf8',
+    ],
+  },
+
 ];
 
 /** Build conic-gradient sunburst from an 8-stop palette. */

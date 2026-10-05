@@ -4,16 +4,31 @@ const experience = [
   {
     role: 'Full Stack Developer Intern',
     company: 'Nexarats Technical Solutions Pvt. Ltd.',
-    period: 'Jul 2026 – Present',
-    description:
-      'Re-architected the Tauri IPC bridge from Node.js NAPI to direct C++ FFI by migrating 183 Tauri commands to cross-platform shared libraries. Ported the CSV, JSON, and Excel import/export pipeline from Rust to C++, enabling reliable processing of 1M+ row datasets while reducing peak memory usage by 27% and improving CSV import performance by 14%.',
+    period: 'Jul 2026 – Sep 2026',
+    projects: [
+      {
+        title: 'Desktop Application Engineering',
+        description:
+          'Re-architected the Tauri IPC bridge from Node.js NAPI to direct C++ FFI by migrating 183 Tauri commands to cross-platform shared libraries. Ported the CSV, JSON, and Excel import/export pipeline from Rust to C++, enabling reliable processing of 1M+ row datasets while reducing peak memory usage by 27% and improving CSV import performance by 14%.',
+      },
+      {
+        title: 'Backend Engineering',
+        description:
+          'Built 22+ Spring Boot REST APIs across Community, Meet, and Learn modules, implementing 5-tier Spring Security RBAC, Bucket4j rate limiting, and configurable asynchronous content moderation.',
+      },
+    ],
     tags: [
-      'C++',
       'Rust',
       'Tauri',
       'Node.js',
       'FFI',
-      'TypeScript'
+      'TypeScript',
+      'Java',
+      'Spring Boot',
+      'Spring Security',
+      'Bucket4j',
+      'REST APIs',
+      'C++',
     ],
   },
   {
@@ -28,10 +43,11 @@ const experience = [
       'Machine Learning',
       'Sockets',
       'Backend',
-      'Healthcare AI'
+      'Healthcare AI',
     ],
   },
 ];
+
 const Experience = () => {
   return (
     <section id="experience" className="w-full bg-[#080809] py-10">
@@ -70,11 +86,28 @@ const Experience = () => {
                 </span>
               </div>
 
-              <p className="text-xs md:text-sm text-neutral-300 mt-2.5 leading-relaxed">
-                {item.description}
-              </p>
+              {item.projects ? (
+                <div className="space-y-4 mt-3.5">
+                  {item.projects.map((proj, pIdx) => (
+                    <div key={pIdx} className="space-y-1.5">
+                      <h4 className="text-xs md:text-sm font-semibold text-white">
+                        {proj.title}
+                      </h4>
+                      <div className="pl-3.5 border-l-2 border-white/20">
+                        <p className="text-xs md:text-sm text-neutral-300 leading-relaxed">
+                          {proj.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-xs md:text-sm text-neutral-300 mt-2.5 leading-relaxed">
+                  {item.description}
+                </p>
+              )}
 
-              <div className="flex flex-wrap gap-1.5 mt-3">
+              <div className="flex flex-wrap gap-1.5 mt-3.5">
                 {item.tags.map((tag) => (
                   <span
                     key={tag}
